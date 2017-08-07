@@ -1,8 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import './index.css';
+
+import theme from './components/Theme';
+import App from './components/App';
+
+ReactDOM.render(
+    <ThemeProvider theme={ theme }>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </ThemeProvider>, 
+document.getElementById('root'));
 registerServiceWorker();
