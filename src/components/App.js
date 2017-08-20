@@ -8,26 +8,37 @@ class App extends Component {
     super(props);
 
     this.state = {
-      counter: 0
+      counter: 0,
+      clockIn: ''
     }
+    this.punchTimeClock = this.punchTimeClock.bind(this);
+  }
+
+  punchTimeClock(){
+    this.setState({
+      clockIn: new Date()
+    })
+    console.log('Clocked in at ', this.state.clockIn)
   }
 
   render() {
-    const { counter } = this.state
-    const displayDate = <div>{Date()}</div>
+    const { counter, clockIn } = this.state
+
     setTimeout( () => {
       this.setState({
         counter: this.state.counter + 1
       })
     }, 1000)
-// in the title is a example of conditional classes
+
+    
     return (
       <Container>
         <Title className={ (counter < 5) ? "notManyPlants" : "lotsOfPlants" } >
           {counter} { (counter===1) ? "Plant" : "Plants" }
         </Title>
-        <div>{new Date().toLocaleTimeString()}</div>
-        { (counter>5 && counter<10) ? displayDate : null }
+        <Button onClick={this.punchTimeClock}>Punch Me</Button>
+
+        { (clockIn) ? <div>clocked in {new Date().toTimeString()}</div> : null }
       </Container>
     );
   }
@@ -45,4 +56,11 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`
+const Button = styled.button`
+  background: purple;
+  padding: 10px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
 `
