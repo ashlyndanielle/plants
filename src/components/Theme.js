@@ -7,7 +7,7 @@ export default {
 
 export const inject = injectGlobal`
     body, html, div, section, aside, span, p, a, article, details, menu,
-    nav, ol, ul, li, object {
+    nav, ol, ul, li, object, input {
         margin: 0;
         padding: 0;
         font-size: 22px;
