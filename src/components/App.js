@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
 
+import Counter from './Counter';
+
 import './App.css';
 
 class App extends Component {
@@ -9,11 +11,9 @@ class App extends Component {
     super(props);
 
     this.state = {
-      counter: 0,
       clockIn: ''
     }
     this.punchTimeClock = this.punchTimeClock.bind(this);
-    this.count = this.count.bind(this)
   }
 
   punchTimeClock(){
@@ -22,24 +22,15 @@ class App extends Component {
     })
     console.log('Clocked in at ', this.state.clockIn)
   }
-
-  count() {
-    console.log('i wssdlkfjawl')
-    this.setState({
-      counter: this.state.counter + 1
-    })
-  }
   
   render() {
     const { counter, clockIn } = this.state
     
-    // setInterval( this.count, 1000)
-    // setTimeout(() => this.count(), 1000)
 
     return (
       <Container>
         <Title className={ (counter < 5) ? "notManyPlants" : "lotsOfPlants" } >
-          {counter} { (counter===1) ? "Plant" : "Plants" }
+          <Counter /> { (counter===1) ? "Plant" : "Plants" }
         </Title>
         <Button onClick={this.punchTimeClock}>Punch Me</Button>
         { (clockIn) ? <div>clocked in at {clockIn}</div> : null }
