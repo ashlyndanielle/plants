@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Date from './Date';
-// this component needs to render the date component
+import InputBox from './InputBox'
 
 class Counter extends Component {
     constructor(props) {
@@ -23,6 +23,7 @@ class Counter extends Component {
             <Container>
                 {this.state.counter}
                 <Date count={this.state.counter} />
+                <InputBox />
             </Container>
         );
     }
