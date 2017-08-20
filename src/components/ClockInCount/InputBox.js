@@ -8,7 +8,8 @@ class InputBox extends Component {
 
         this.state = {
             input: '',
-            clicked: false
+            clicked: false,
+            names: []
         }
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleInputClick = this.handleInputClick.bind(this);
@@ -18,9 +19,10 @@ class InputBox extends Component {
             input: e.target.value
         })
     }
-    handleInputClick(){
+    handleInputClick(userInput){
         this.setState({
-            clicked: !this.state.clicked
+            clicked: !this.state.clicked,
+            names: [...this.state.names, userInput]
         })
     }
     render() {
@@ -29,10 +31,10 @@ class InputBox extends Component {
                 <TextBox 
                     value={this.state.input}
                     onChange={this.handleInputChange}/>
-                <Button onClick={this.handleInputClick}>Print Please</Button>
+                <Button onClick={ () => this.handleInputClick(this.state.userInput) }>Print Please</Button>
                 <Divider/>
-                {(this.state.clicked) ? <Name>{this.state.input}</Name> : null}
-                <Words input={this.state.input}/>
+                {(this.state.clicked) ? <Name>{this.state.names}</Name> : null}
+                {/* <Words input={this.state.input}/> */}
             </Container>
         );
     }
