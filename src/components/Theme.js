@@ -13,4 +13,10 @@ export const inject = injectGlobal`
         font-size: 22px;
         font-family: 'Gloria Hallelujah', 'cursive';
     }
+    input:focus{
+        outline: none;
+    }
+    button:focus{
+        outline: none;
+    }
 `

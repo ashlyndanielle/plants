@@ -13,6 +13,7 @@ class InputBox extends Component {
         }
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleInputClick = this.handleInputClick.bind(this);
+        this.clear = this.clear.bind(this);
     }
     handleInputChange(e){
         this.setState({
@@ -20,10 +21,15 @@ class InputBox extends Component {
         })
     }
     handleInputClick(userInput){
-        
         this.setState({
             clicked: !this.state.clicked,
             names: [...this.state.names, userInput]
+        })
+        this.clear();
+    }
+    clear(){
+        this.setState({
+            input: ``
         })
     }
     render() {
@@ -52,9 +58,11 @@ const Container = styled.section`
 `
 const TextBox = styled.input`
     border: 1px solid purple;
-    border-radius: 10px;
     color: purple;
     margin: 10px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 1px solid purple;
 `
 const Button = styled.button`
     background: purple;
@@ -70,7 +78,9 @@ const Divider = styled.div`
     background: purple;
     margin: 10px;
 `
-const Name = styled.h1`
+const Name = styled.h2`
     color: black;
     text-align: center;
+    margin: 0;
+    padding: 0;
 `

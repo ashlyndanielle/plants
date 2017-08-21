@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
 
+import Counter from './Counter';
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -16,11 +18,10 @@ class App extends Component {
     this.setState({
       clockIn: moment().format()
     })
-    console.log('Clocked in at ', this.state.clockIn)
   }
   
   render() {
-    const { clockIn } = this.state
+    const { counter, clockIn } = this.state
     
 
     return (
