@@ -71,6 +71,7 @@ const TextBox = styled.input`
     padding-left: 10px;
     border: none;
     border-bottom: 1px solid purple;
+    background: gray;
 `
 const Button = styled.button`
     background: purple;
