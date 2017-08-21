@@ -9,19 +9,37 @@ class App extends Component {
     super(props);
 
     this.state = {
-      clockIn: ''
+      clockIn: '',
+      clockOut: '',
+      clicked: false
     }
     this.punchTimeClock = this.punchTimeClock.bind(this);
+    this.toggleClick = this.toggleClick.bind(this);
+    this.clockOut = this.punchOut.bind(this);
   }
-
+  toggleClick(){
+    this.setState({
+      clicked: !this.state.clicked
+    })
+    if (this.state.clicked) {
+      this.punchOut()
+    } else {
+    this.punchTimeClock()
+    }
+  }
+  punchOut(){
+    this.setState({
+      clockOut: moment().format("h:mm:ss a dddd, MMMM Do, YYYY")
+    })
+  }
   punchTimeClock(){
     this.setState({
-      clockIn: moment().format()
+      clockIn: moment().format("h:mm:ss a dddd, MMMM Do, YYYY")
     })
   }
   
   render() {
-    const { counter, clockIn } = this.state
+    const { counter, clockIn, clockOut } = this.state
     
 
     return (
@@ -29,8 +47,9 @@ class App extends Component {
         <Title className={ (this.props.count < 5) ? "notManyPlants" : "lotsOfPlants" } >
           { (this.props.count===1) ? "Plant" : "Plants" }
         </Title>
-        <Button onClick={this.punchTimeClock}>Punch Me</Button>
+        <Button onClick={this.toggleClick}>Punch Me</Button>
         { (clockIn) ? <div>clocked in at {clockIn}</div> : null }
+        { (clockOut) ? <div>clocked out at {clockOut}</div> : null }
       </Container>
     );
   }
