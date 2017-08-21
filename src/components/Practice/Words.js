@@ -11,7 +11,7 @@ const Words = ({ input }) => {
 
 export default Words;
 const Container = styled.section`
-    font-size: 32px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
 `

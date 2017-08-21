@@ -25,4 +25,5 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: gray;
 `

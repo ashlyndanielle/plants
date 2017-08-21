@@ -13,6 +13,7 @@ class InputBox extends Component {
         }
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleInputClick = this.handleInputClick.bind(this);
+        this.handleKeyPress = this.handleKeyPress.bind(this)
         this.clear = this.clear.bind(this);
     }
     handleInputChange(e){
@@ -27,6 +28,12 @@ class InputBox extends Component {
         })
         this.clear();
     }
+    handleKeyPress(target) {
+        if(target.charCode==13){
+            this.handleInputClick(this.state.input)
+        }
+    
+    }
     clear(){
         this.setState({
             input: ``
@@ -40,7 +47,8 @@ class InputBox extends Component {
             <Container>
                 <TextBox 
                     value={this.state.input}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange}
+                    onKeyPress={ this.handleKeyPress }/>
                 <Button onClick={ () => this.handleInputClick(this.state.input) }>Print Please</Button>
                 <Divider/>
                 {/* {(this.state.clicked) ? <Name>{this.state.names}</Name> : null} */}
