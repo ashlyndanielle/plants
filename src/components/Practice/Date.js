@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
 
-import Counter from './Counter';
-
 class App extends Component {
   constructor(props){
     super(props);
@@ -22,7 +20,7 @@ class App extends Component {
   }
   
   render() {
-    const { counter, clockIn } = this.state
+    const { clockIn } = this.state
     
 
     return (

@@ -20,21 +20,25 @@ class InputBox extends Component {
         })
     }
     handleInputClick(userInput){
+        
         this.setState({
             clicked: !this.state.clicked,
             names: [...this.state.names, userInput]
         })
     }
     render() {
+        let list = this.state.names.map((name, i) => {
+            return <Name key={i}>{name}</Name>
+        })
         return (
             <Container>
                 <TextBox 
                     value={this.state.input}
                     onChange={this.handleInputChange}/>
-                <Button onClick={ () => this.handleInputClick(this.state.userInput) }>Print Please</Button>
+                <Button onClick={ () => this.handleInputClick(this.state.input) }>Print Please</Button>
                 <Divider/>
-                {(this.state.clicked) ? <Name>{this.state.names}</Name> : null}
-                {/* <Words input={this.state.input}/> */}
+                {/* {(this.state.clicked) ? <Name>{this.state.names}</Name> : null} */}
+                <Words input={list}/>
             </Container>
         );
     }
@@ -67,6 +71,6 @@ const Divider = styled.div`
     margin: 10px;
 `
 const Name = styled.h1`
-    color: purple;
+    color: black;
     text-align: center;
 `
