@@ -32,7 +32,6 @@ class InputBox extends Component {
         if(target.charCode==13){
             this.handleInputClick(this.state.input)
         }
-    
     }
     clear(){
         this.setState({

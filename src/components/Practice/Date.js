@@ -38,9 +38,14 @@ class App extends Component {
     })
   }
   
+  
   render() {
+
+    // this is basically the same as using jQuery $()
+    // getElementById('#button').on('click', function(){
+    // })
+
     const { counter, clockIn, clockOut } = this.state
-    
 
     return (
       <Container>
