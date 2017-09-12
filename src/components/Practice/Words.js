@@ -19,18 +19,8 @@ const Container = styled.section`
 const Term = styled.dt`
     font-size: 12px;
     ${props => props.theme.floatLeft2};
-    clear: left;
-    :before{
-        content: '';
-        display: table;
-    }
-    :after {
-        clear: both;
-        content: '';
-        display: table;
-    }
 `
 const Description = styled.dd`
-    ${props => props.theme.floatLeft2};
+    ${props => props.theme.floatRight2};
     font-size: 12px;
 `

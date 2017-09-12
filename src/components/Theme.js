@@ -6,6 +6,7 @@ export default {
     floatLeft2: () => (`
         float: left;
         width: 49%;
+        clear: right;
     `),
     floatRight2: () => (`
         float: right;
