@@ -33,6 +33,6 @@ export default Counter;
 
 const Container = styled.section`
     font-size: 28px;
-    color: purple;
+    color: #8EA4A2;
     text-align: center;
 `

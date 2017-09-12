@@ -25,5 +25,8 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: gray;
+  min-height: 88vh;
+  background: -webkit-radial-gradient(#648880, #293f50);
+  background:    -moz-radial-gradient(#648880, #293f50);
+  background:         radial-gradient(#648880, #293f50);
 `

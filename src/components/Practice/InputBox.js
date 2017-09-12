@@ -64,30 +64,30 @@ const Container = styled.section`
     font-size: 22px;
 `
 const TextBox = styled.input`
-    border: 1px solid purple;
-    color: purple;
+    border: 1px solid #8EA4A2;
+    color: #8EA4A2;
     margin: 10px;
     padding-left: 10px;
     border: none;
-    border-bottom: 1px solid purple;
-    background: gray;
+    border-bottom: 1px solid #8EA4A2;
+    background: transparent;
 `
 const Button = styled.button`
-    background: purple;
+    background: #8EA4A2;
     padding: 10px;
     color: white;
-    border: 1px solid black;
+    border: 1px solid #8EA4A2;
     border-radius: 10px;
     margin: 10px;
 `
 const Divider = styled.div`
     width: 500px;
     height: 3px;
-    background: purple;
+    background: #8EA4A2;
     margin: 10px;
 `
 const Name = styled.h2`
-    color: black;
+    color: #8EA4A2;
     text-align: center;
     margin: 0;
     padding: 0;

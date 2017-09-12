@@ -74,9 +74,9 @@ const Container = styled.section`
   align-items: center;
 `
 const Button = styled.button`
-  background: purple;
+  background: #8EA4A2;
   padding: 10px;
   color: white;
-  border: 1px solid black;
+  border: 1px solid #8EA4A2;
   border-radius: 10px;
 `
