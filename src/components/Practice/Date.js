@@ -76,7 +76,7 @@ const Container = styled.section`
 const Button = styled.button`
   background: #8EA4A2;
   padding: 10px;
-  color: white;
+  color: #02043E;
   border: 1px solid #8EA4A2;
   border-radius: 10px;
 `

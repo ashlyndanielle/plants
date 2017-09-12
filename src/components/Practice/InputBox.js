@@ -8,6 +8,7 @@ class InputBox extends Component {
 
         this.state = {
             input: '',
+            description: [],
             clicked: false,
             names: []
         }
@@ -24,7 +25,8 @@ class InputBox extends Component {
     handleInputClick(userInput){
         this.setState({
             clicked: !this.state.clicked,
-            names: [...this.state.names, userInput]
+            names: [...this.state.names, userInput],
+            description: [...this.state.description, "this is a description and I'm going to make it really long so that I can test what is going on here"]
         })
         this.clear();
     }
@@ -42,6 +44,9 @@ class InputBox extends Component {
         let list = this.state.names.map((name, i) => {
             return <Name key={i}>{name}</Name>
         })
+        let descriptionList = this.state.description.map((desc, i) => {
+            return <Name key={i}>{desc}</Name>
+        })
         return (
             <Container>
                 <TextBox 
@@ -51,7 +56,7 @@ class InputBox extends Component {
                 <Button onClick={ () => this.handleInputClick(this.state.input) }>Print Please</Button>
                 <Divider/>
                 {/* {(this.state.clicked) ? <Name>{this.state.names}</Name> : null} */}
-                <Words input={list}/>
+                <Words input={list} desc={descriptionList}/>
             </Container>
         );
     }
@@ -61,11 +66,10 @@ export default InputBox;
 
 const Container = styled.section`
     text-align: center;
-    font-size: 22px;
 `
 const TextBox = styled.input`
     border: 1px solid #8EA4A2;
-    color: #8EA4A2;
+    color: #02043E;
     margin: 10px;
     padding-left: 10px;
     border: none;
@@ -75,7 +79,7 @@ const TextBox = styled.input`
 const Button = styled.button`
     background: #8EA4A2;
     padding: 10px;
-    color: white;
+    color: #02043E;
     border: 1px solid #8EA4A2;
     border-radius: 10px;
     margin: 10px;
@@ -87,8 +91,9 @@ const Divider = styled.div`
     margin: 10px;
 `
 const Name = styled.h2`
-    color: #8EA4A2;
+    color: #02043E;
     text-align: center;
     margin: 0;
     padding: 0;
+    border: 1px solid black;
 `
