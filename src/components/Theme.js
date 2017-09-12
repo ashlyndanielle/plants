@@ -3,14 +3,13 @@ import { injectGlobal } from 'styled-components';
 export default {
     colorPrimary: '#084701',
     colorSecondary: '#021300',
-    floatLeft2: () => (`
+    floatLeft: ({width}) => (`
         float: left;
-        width: 49%;
-        clear: right;
+        width: ${width}%;
     `),
-    floatRight2: () => (`
+    floatRight: ({width}) => (`
         float: right;
-        width: 49%;
+        width: ${width}%;
     `),
 }
 
