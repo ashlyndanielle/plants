@@ -11,17 +11,17 @@ const Words = ({ input, desc }) => {
 };
 
 export default Words;
-const Container = styled.section`
+const Container = styled.dl`
     font-size: 12px;
     margin: 0;
     padding: 0;
 `
-const Term = styled.dt`
+const Term = styled.div`
     font-size: 12px;
     ${props => props.theme.floatLeft({width: 40})};
     clear: right;
 `
-const Description = styled.dd`
+const Description = styled.div`
     ${props => props.theme.floatRight({width: 60})};
     font-size: 12px;
 `

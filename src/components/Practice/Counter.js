@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Date from './Date';
-import InputBox from './InputBox'
+import InputBox from './InputBox';
 
 class Counter extends Component {
     constructor(props) {

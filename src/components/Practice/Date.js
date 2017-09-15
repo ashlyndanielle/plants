@@ -49,7 +49,7 @@ class App extends Component {
 
     return (
       <Container>
-        <Title className={ (this.props.count < 5) ? "notManyPlants" : "lotsOfPlants" } >
+        <Title className={ ( this.props.count%2 ) ? "notManyPlants" : "lotsOfPlants" } >
           { (this.props.count===1) ? "Plant" : "Plants" }
         </Title>
         <Button onClick={this.toggleClick}>Punch Me</Button>

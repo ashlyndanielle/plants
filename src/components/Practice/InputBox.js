@@ -90,7 +90,7 @@ const Divider = styled.div`
     background: #8EA4A2;
     margin: 10px;
 `
-const Name = styled.h2`
+const Name = styled.p`
     color: #02043E;
     text-align: center;
     margin: 0;
