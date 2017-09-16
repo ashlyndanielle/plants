@@ -24,7 +24,6 @@ class Counter extends Component {
             <Container>
                 {this.state.counter}
                 <Date count={this.state.counter} />
-                <Video />
                 <InputBox />
             </Container>
         );

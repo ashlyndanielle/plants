@@ -49,6 +49,9 @@ class InputBox extends Component {
         })
         return (
             <Container>
+                <SubmitButton 
+                    type='submit' 
+                    name='password' />
                 <TextBox 
                     value={this.state.input}
                     onChange={this.handleInputChange}
@@ -68,13 +71,22 @@ const Container = styled.section`
     text-align: center;
 `
 const TextBox = styled.input`
-    border: 1px solid #8EA4A2;
     color: #02043E;
     margin: 10px;
     padding-left: 10px;
     border: none;
     border-bottom: 1px solid #8EA4A2;
     background: transparent;
+`
+const SubmitButton = styled(TextBox)`
+    border: none;
+    font-family: 'system-ui';
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    :active {
+        box-shadow: inset 0 0 20px 10px #8EA4A2;
+    }
 `
 const Button = styled.button`
     background: #8EA4A2;

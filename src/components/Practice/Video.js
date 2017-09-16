@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import wakeboard from '../../assets/wakeboard.m4v';
 import trees from '../../assets/trees.jpg'
 
+// this looks like shit so I don't want it displayed
+
 const Video = () => {
   return (
     <Container>
