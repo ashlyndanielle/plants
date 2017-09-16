@@ -49,12 +49,13 @@ class InputBox extends Component {
         })
         return (
             <Container>
+                <ColorPicker
+                    type='color'
+                    value="#020243e" 
+                    name='color picker' />
                 <TextBox 
-                    type='text' 
-                    name='password' />
-                <TextBox 
-                    value={this.state.input}
-                    onChange={this.handleInputChange}
+                    value={ this.state.input }
+                    onChange={ this.handleInputChange }
                     onKeyPress={ this.handleKeyPress }/>
                 <Button onClick={ () => this.handleInputClick(this.state.input) }>Print Please</Button>
                 <Divider/>
@@ -78,6 +79,11 @@ const TextBox = styled.input`
     border-bottom: 1px solid #8EA4A2;
     background: transparent;
 `
+const ColorPicker = styled.input`
+    border: none;
+    height: 30px;
+    width: 122px;
+`
 const Button = styled.button`
     background: #8EA4A2;
     padding: 10px;
@@ -85,6 +91,12 @@ const Button = styled.button`
     border: 1px solid #8EA4A2;
     border-radius: 10px;
     margin: 10px;
+    :active {
+        background: -webkit-linear-gradient(#648880, #293f50);
+        background:    -moz-linear-gradient(#648880, #293f50);
+        background:         linear-gradient(#648880, #293f50);
+        border: none;
+    }
 `
 const Divider = styled.div`
     width: 500px;

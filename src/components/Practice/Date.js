@@ -79,4 +79,10 @@ const Button = styled.button`
   color: #02043E;
   border: 1px solid #8EA4A2;
   border-radius: 10px;
+  :active {
+    background: -webkit-linear-gradient(#648880, #293f50);
+    background:    -moz-linear-gradient(#648880, #293f50);
+    background:         linear-gradient(#648880, #293f50);
+    border: none;
+}
 `

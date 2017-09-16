@@ -14,6 +14,9 @@ export default {
 }
 
 export const inject = injectGlobal`
+    * {
+        box-sizing: border-box;
+    }
     body, html, div, section, aside, span, p, a, article, details, menu,
     nav, ol, ul, li, object, input, dl, dt, dd {
         margin: 0;
