@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Date from './Date';
 import InputBox from './InputBox';
-import Video from './Video';
+import Tables from './Tables';
 
 class Counter extends Component {
     constructor(props) {
@@ -25,6 +25,7 @@ class Counter extends Component {
                 {this.state.counter}
                 <Date count={this.state.counter} />
                 <InputBox />
+                <Tables />
             </Container>
         );
     }

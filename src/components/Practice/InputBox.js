@@ -51,7 +51,7 @@ class InputBox extends Component {
             <Container>
                 <ColorPicker
                     type='color'
-                    value="#020243e" 
+                    value="#02043e" 
                     name='color picker' />
                 <TextBox 
                     value={ this.state.input }
