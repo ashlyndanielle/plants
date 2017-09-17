@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import StyledTable from './StyledTable';
+
 const Tables = () => {
   return (
     <div>
@@ -41,6 +43,7 @@ const Tables = () => {
           </tr>
         </tfoot>
       </TableContainer>
+      <StyledTable />
     </div>
   );
 };

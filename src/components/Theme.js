@@ -21,7 +21,7 @@ export const inject = injectGlobal`
     nav, ol, ul, li, object, input, dl, dt, dd {
         margin: 0;
         padding: 0;
-        font-size: 22px;
+        font-size: 20px;
         font-family: 'Gloria Hallelujah', 'cursive';
     }
     input:focus{
