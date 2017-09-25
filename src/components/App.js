@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Switch, Route } from 'react-router-dom';
 
 import Counter from './Practice/Counter';
+import HtmlPractice from './HtmlPractice/HtmlPractice';
 
 import './App.css';
 
@@ -10,9 +12,10 @@ class App extends Component {
     
 
     return (
-      <Container>
-        <Counter/>
-      </Container>
+      <Switch>
+        <Route exact path='/' component={ Counter } />
+        <Route path='/page2' component={ HtmlPractice } />
+      </Switch>
     );
   }
 }

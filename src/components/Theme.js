@@ -14,7 +14,9 @@ export default {
 }
 
 export const inject = injectGlobal`
-    * {
+    *,
+    *:before,
+    *:after {
         box-sizing: border-box;
     }
     body, html, div, section, aside, span, p, a, article, details, menu,
