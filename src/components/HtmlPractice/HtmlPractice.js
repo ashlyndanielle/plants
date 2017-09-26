@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 class HtmlPractice extends Component {
@@ -6,6 +7,9 @@ class HtmlPractice extends Component {
     return (
       <Container>
         HtmlPractice
+        <Link to='/'>
+          <Button>Home Page</Button>
+        </Link>
       </Container>
     );
   }
@@ -17,4 +21,13 @@ const Container = styled.section`
   font-size: 52px;
   color: black;
   background: lightseagreen;
+`
+const Button = styled.button`
+  padding: 10px;
+  background: #02043E;
+  color: white;
+  font-size: 22px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: block;
 `

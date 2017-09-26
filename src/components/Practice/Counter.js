@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Date from './Date';
@@ -26,6 +27,9 @@ class Counter extends Component {
                 <Date count={this.state.counter} />
                 <InputBox />
                 <Tables />
+                <Link to='/page2'>
+                    <Button>Other Page</Button>
+                </Link>
             </Container>
         );
     }
@@ -46,4 +50,12 @@ const Container = styled.section`
     background: -webkit-radial-gradient(#648880, #293f50);
     background:    -moz-radial-gradient(#648880, #293f50);
     background:         radial-gradient(#648880, #293f50);
+`
+const Button = styled.button`
+    padding: 10px;
+    background: #02043E;
+    color: white;
+    font-size: 22px;
+    border-radius: 5px;
+    margin-top: 20px;
 `

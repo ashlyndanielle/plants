@@ -32,4 +32,7 @@ export const inject = injectGlobal`
     button:focus{
         outline: none;
     }
+    button {
+        border: none;
+    }
 `
