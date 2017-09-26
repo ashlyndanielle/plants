@@ -30,4 +30,5 @@ const Button = styled.button`
   border-radius: 5px;
   margin-top: 20px;
   display: block;
+  text-decoration: none;
 `

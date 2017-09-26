@@ -25,6 +25,7 @@ export const inject = injectGlobal`
         padding: 0;
         font-size: 20px;
         font-family: 'Gloria Hallelujah', 'cursive';
+        text-decoration: none;
     }
     input:focus{
         outline: none;
