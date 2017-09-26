@@ -23,13 +23,13 @@ class Counter extends Component {
 
         return (
             <Container>
+                <Link to='/page2'>
+                    <Button>Other Page</Button>
+                </Link>
                 {this.state.counter}
                 <Date count={this.state.counter} />
                 <InputBox />
                 <Tables />
-                <Link to='/page2'>
-                    <Button>Other Page</Button>
-                </Link>
             </Container>
         );
     }

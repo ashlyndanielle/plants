@@ -6,7 +6,7 @@ class HtmlPractice extends Component {
   render() {
     return (
       <Container>
-        HtmlPractice
+        <Words>HtmlPractice</Words>
         <Link to='/'>
           <Button>Home Page</Button>
         </Link>
@@ -18,9 +18,13 @@ class HtmlPractice extends Component {
 export default HtmlPractice;
 
 const Container = styled.section`
-  font-size: 52px;
   color: black;
   background: lightseagreen;
+  padding: 20px;
+`
+const Words = styled.p`
+  font-size: 3em;
+  line-height: 1;
 `
 const Button = styled.button`
   padding: 10px;
